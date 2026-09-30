@@ -4,6 +4,7 @@
 
 let instance = { locations: {}, demands: [], depotSupplies: {} };
 let solution = { routes: {}, objective: 0 };
+let currentInstanceId = null;
 
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
@@ -220,6 +221,8 @@ function handleFile(file, type) {
     const reader = new FileReader();
     reader.onload = (event) => {
         const previousValue = type === 'instance' ? instance : solution;
+        const previousSolution = solution;
+        const previousInstanceId = currentInstanceId;
         try {
             const content = event.target.result;
             if (type === 'instance') {
@@ -229,7 +232,13 @@ function handleFile(file, type) {
                     try { instance = JSON.parse(content); } catch (error) { throw jsonErrorWithLine(error, content); }
                 }
                 validateInstance(instance);
+                currentInstanceId = file.name.match(/^MPVRP_(\d{3})_/i)?.[1] || null;
+                solution = { routes: {}, objective: 0 };
             } else {
+                const solutionId = file.name.match(/^Sol_(\d{3})(?:_|\.)/i)?.[1];
+                if (currentInstanceId && solutionId && solutionId !== currentInstanceId) {
+                    throw new Error(`this solution names instance ${solutionId}, but instance ${currentInstanceId} is loaded.`);
+                }
                 if (file.name.endsWith('.dat') || file.name.endsWith('.txt')) {
                     solution = parseDatSolution(content);
                 } else {
@@ -239,10 +248,11 @@ function handleFile(file, type) {
             }
             initData();
             updateFileStatus(type, file.name);
+            if (type === 'instance') resetFileStatus('solution');
             resize();
             clearFileError();
         } catch (err) {
-            if (type === 'instance') instance = previousValue;
+            if (type === 'instance') { instance = previousValue; solution = previousSolution; currentInstanceId = previousInstanceId; }
             else solution = previousValue;
             try { initData(); resize(); } catch (restoreError) { console.error(restoreError); }
             showFileError(file.name, err);
@@ -251,6 +261,57 @@ function handleFile(file, type) {
     };
     reader.readAsText(file);
 }
+
+async function loadInstanceByNumber(event) {
+    event.preventDefault();
+    const input = document.getElementById('instanceNumber');
+    const button = document.getElementById('loadInstanceNumber');
+    const number = Number(input.value);
+    if (!Number.isInteger(number) || number < 1 || number > 100) {
+        showFileError('Instance number', new Error('enter a whole number from 1 to 100.'));
+        return;
+    }
+    const id = String(number).padStart(3, '0');
+    button.disabled = true;
+    button.textContent = 'Loading…';
+    try {
+        const manifestResponse = await fetch('instances.json');
+        if (!manifestResponse.ok) throw new Error('the official instance list is unavailable.');
+        const manifest = await manifestResponse.json();
+        const pair = manifest[id];
+        if (!pair || typeof pair.instance !== 'string' || typeof pair.solution !== 'string'
+            || !new RegExp(`^MPVRP_${id}_[A-Za-z0-9_]+\\.dat$`).test(pair.instance)
+            || !new RegExp(`^Sol_${id}_[A-Za-z0-9_]+\\.dat$`).test(pair.solution)) {
+            throw new Error(`official instance and solution ${id} were not found.`);
+        }
+        const [instanceResponse, solutionResponse] = await Promise.all([
+            fetch(`../assets/instances/${pair.instance}`),
+            fetch(`../assets/solutions/${pair.solution}`)
+        ]);
+        if (!instanceResponse.ok) throw new Error(`could not load official instance ${id} (${instanceResponse.status}).`);
+        if (!solutionResponse.ok) throw new Error(`could not load reference solution ${id} (${solutionResponse.status}).`);
+        const [instanceText, solutionText] = await Promise.all([instanceResponse.text(), solutionResponse.text()]);
+        const parsedInstance = parseDatInstance(instanceText);
+        const parsedSolution = parseDatSolution(solutionText);
+        validateInstance(parsedInstance);
+        validateSolution(parsedSolution);
+        instance = parsedInstance;
+        currentInstanceId = id;
+        solution = parsedSolution;
+        initData();
+        updateFileStatus('instance', pair.instance);
+        updateFileStatus('solution', pair.solution);
+        clearFileError();
+        resize();
+    } catch (error) {
+        showFileError(`Instance ${id}`, error);
+    } finally {
+        button.disabled = false;
+        button.textContent = 'Load';
+    }
+}
+
+document.getElementById('instanceNumberForm').addEventListener('submit', loadInstanceByNumber);
 
 function validateInstance(value) {
     if (!value || typeof value !== 'object') throw new Error('the instance must be an object.');
@@ -303,6 +364,7 @@ async function loadExample() {
         validateSolution(parsedSolution);
 
         instance = parsedInstance;
+        currentInstanceId = '052';
         solution = parsedSolution;
         updateFileStatus('instance', EXAMPLE_FILES.instance.split('/').pop());
         updateFileStatus('solution', EXAMPLE_FILES.solution.split('/').pop());
@@ -741,6 +803,15 @@ function updateFileStatus(type, filename) {
         : filename;
 }
 
+function resetFileStatus(type) {
+    const statusEl = document.getElementById(type + 'Status');
+    const zoneEl = document.getElementById(type + 'Zone');
+    statusEl.innerHTML = '<svg class="status-icon" aria-hidden="true"><use href="#icon-status-pending"></use></svg>';
+    statusEl.setAttribute('aria-label', `${type === 'instance' ? 'Instance' : 'Solution'} not loaded`);
+    zoneEl.classList.remove('loaded');
+    zoneEl.querySelector('.upload-label').textContent = type === 'instance' ? 'Instance' : 'Solution';
+}
+
 setupDragDrop('instanceZone', 'instanceUpload', 'instance');
 setupDragDrop('solutionZone', 'solutionUpload', 'solution');
 
@@ -851,9 +922,10 @@ function initData() {
     renderFleetLegend();
 
     // Update UI State
-    dataLoaded = Object.keys(instance.locations).length > 0 && trucks.length > 0;
-    document.getElementById('emptyState').style.display = dataLoaded ? 'none' : 'flex';
-    document.getElementById('mapOverlay').style.display = dataLoaded ? 'flex' : 'none';
+    const hasInstance = Object.keys(instance.locations).length > 0;
+    dataLoaded = hasInstance && trucks.length > 0;
+    document.getElementById('emptyState').style.display = hasInstance ? 'none' : 'flex';
+    document.getElementById('mapOverlay').style.display = hasInstance ? 'flex' : 'none';
 
     updateUI();
 }
@@ -1344,7 +1416,7 @@ function drawTruck(truck, currentProgress) {
 function draw() {
     ctx.clearRect(0, 0, width, height);
 
-    if (!dataLoaded) return;
+    if (!instance.locations || Object.keys(instance.locations).length === 0) return;
 
     drawMapBackground();
 
@@ -1380,7 +1452,7 @@ function draw() {
 
     // Update overlay
     document.getElementById('overlayStatus').textContent =
-        isPlaying ? 'Animating...' : `Step ${Math.floor(progress)} of ${maxProgress}`;
+        !dataLoaded ? 'Instance loaded · upload a solution to view routes' : isPlaying ? 'Animating...' : `Step ${Math.floor(progress)} of ${maxProgress}`;
 }
 
 // ═══════════════════════════════════════════════════════════════

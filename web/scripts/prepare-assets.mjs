@@ -26,6 +26,16 @@ for (const css of ['visualisation.css', 'app.css']) {
 }
 await cp(resolve(root, 'pages/static/js/visualisation.js'), resolve(visualizerTarget, 'static/js/visualisation.js'));
 await cp(resolve(root, 'data/examples'), resolve(import.meta.dirname, '../public/data/examples'), { recursive: true, force: true });
+const references = JSON.parse(await readFile(resolve(root, 'data/reference_scores.v1.json'), 'utf8'));
+const officialPairs = Object.fromEntries(references.entries.map(({ id, instance, solution }) => [id, { instance, solution }]));
+if (Object.keys(officialPairs).length !== 100) throw new Error('Expected 100 official visualizer pairs');
+await mkdir(resolve(target, 'instances'), { recursive: true });
+await mkdir(resolve(target, 'solutions'), { recursive: true });
+for (const { instance, solution } of Object.values(officialPairs)) {
+  await cp(resolve(root, 'data/instances/in', instance), resolve(target, 'instances', instance));
+  await cp(resolve(root, 'data/solutions/in', solution), resolve(target, 'solutions', solution));
+}
+await writeFile(resolve(visualizerTarget, 'instances.json'), JSON.stringify(officialPairs) + '\n');
 
 const selection = await readFile(resolve(root, 'images/selected_solution_images.txt'), 'utf8');
 const instanceFiles = await readdir(resolve(root, 'data/instances/in'));

@@ -1,8 +1,8 @@
 :root {
   color-scheme: light;
-  --accent: #F4320B;
-  --accent-dark: #cf2808;
-  --accent-soft: #fff;
+  --accent: #2563eb;
+  --accent-dark: #1d4ed8;
+  --accent-soft: #eff6ff;
 }
 html { scroll-behavior: smooth; }
 body { font-family: Inter, sans-serif; }
@@ -13,18 +13,18 @@ body { font-family: Inter, sans-serif; }
 .floating-site-header .brand-icon { height: 2.4rem; width: 2.4rem; border-radius: 999px; background: var(--accent); }
 .floating-site-header .brand-icon svg { height: 1.2rem; width: 1.2rem; }
 .text-blue-600, .text-blue-700 { color: var(--accent) !important; }
-.text-blue-100, .text-blue-200, .text-blue-300 { color: #ffb3a3 !important; }
-.text-blue-950 { color: #431208 !important; }
-.text-blue-400 { color: #ff7357 !important; }
+.text-blue-100, .text-blue-200, .text-blue-300 { color: #bfdbfe !important; }
+.text-blue-950 { color: #172554 !important; }
+.text-blue-400 { color: #60a5fa !important; }
 .bg-blue-600 { background-color: var(--accent) !important; }
 .bg-blue-700, .hover\:bg-blue-700:hover { background-color: var(--accent-dark) !important; }
 .bg-blue-50, .hover\:bg-blue-50:hover { background-color: var(--accent-soft) !important; }
-.bg-blue-50\/50 { background-color: rgba(255, 240, 235, .65) !important; }
+.bg-blue-50\/50 { background-color: rgba(239, 246, 255, .65) !important; }
 .border-blue-300, .border-blue-400, .border-blue-600 { border-color: var(--accent) !important; }
 .hover\:bg-blue-600:hover, .hover\:bg-blue-500:hover { background-color: var(--accent) !important; }
 .hover\:text-blue-600:hover { color: var(--accent) !important; }
 .hover\:border-blue-600:hover, .focus\:border-blue-600:focus { border-color: var(--accent) !important; }
-h1, h2, h3, h4, .font-display { font-family: "Bricolage Grotesque", sans-serif; }
+h1, h2, h3, h4, .font-display { font-family: "Space Grotesk", sans-serif; }
 .grid-noise {
   background-image: linear-gradient(rgba(15, 23, 42, .045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(15, 23, 42, .045) 1px, transparent 1px);
@@ -58,13 +58,13 @@ h1, h2, h3, h4, .font-display { font-family: "Bricolage Grotesque", sans-serif; 
 .markdown-body { color: #334155; font-size: 1rem; line-height: 1.8; }
 .markdown-body h1 { color: #0f172a; font-size: 2.25rem; line-height: 1.12; margin: 0 0 2rem; }
 .markdown-body h2 { color: #0f172a; font-size: 1.55rem; line-height: 1.25; margin: 2.5rem 0 1rem; }
-.markdown-body h3 { color: #431208; font-size: 1.15rem; margin: 2rem 0 .75rem; }
+.markdown-body h3 { color: #172554; font-size: 1.15rem; margin: 2rem 0 .75rem; }
 .markdown-body p, .markdown-body ul, .markdown-body ol { margin: 0 0 1rem; }
 .markdown-body ul, .markdown-body ol { padding-left: 1.4rem; }
 .markdown-body ul { list-style: disc; }
 .markdown-body ol { list-style: decimal; }
 .markdown-body code { background: var(--accent-soft); color: var(--accent-dark); border-radius: .35rem; padding: .12rem .35rem; font-size: .88em; }
-.markdown-body pre { overflow-x: auto; border: 1px solid #ffd2c8; background: #171411; color: #e7e5e4; border-radius: 1rem; padding: 1.25rem; margin: 1.25rem 0; }
+.markdown-body pre { overflow-x: auto; border: 1px solid #bfdbfe; background: #111827; color: #e7e5e4; border-radius: 1rem; padding: 1.25rem; margin: 1.25rem 0; }
 .markdown-body pre code { background: transparent; color: inherit; padding: 0; }
 .markdown-body blockquote { border-left: 3px solid var(--accent); background: var(--accent-soft); padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 .75rem .75rem 0; }
 .markdown-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .92rem; }
@@ -92,7 +92,7 @@ h1, h2, h3, h4, .font-display { font-family: "Bricolage Grotesque", sans-serif; 
 .contributor-icon svg { height: 1.05rem; width: 1.05rem; }
 .contributor-icon--github { background: #0f172a; color: #fff; }
 .contributor-icon--github:hover { background: #334155; }
-.contributor-icon--email { background: #ffe0d8; color: var(--accent); }
+.contributor-icon--email { background: #dbeafe; color: var(--accent); }
 .contributor-icon--email:hover { background: var(--accent); color: #fff; }
 @media (min-width: 1024px) {
   .docs-layout { grid-template-columns: 15rem minmax(0, 1fr); gap: 2rem; }

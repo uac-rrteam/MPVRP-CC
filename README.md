@@ -18,7 +18,7 @@ npm ci
 npm run dev
 ```
 
-`npm run build` produces `web/dist/`. For the project Pages URL, build with `PAGES_BASE=/MPVRP-CC/ npm run build`. The React routes use URL hashes; the visualizer is a standalone static page at `/visualizer/` within the Pages base path. `web/scripts/prepare-assets.mjs` copies the selected plot pairs from `images/selected_solution_images.txt`, matching `.dat` downloads, benchmark ZIPs, the startup ZIP, and leaderboard JSON into generated public assets. Commit these source assets when updating the site; do not edit `web/public/` directly.
+`npm run build` produces `web/dist/`. For the project Pages URL, build with `PAGES_BASE=/MPVRP-CC/ npm run build`. The React routes use URL hashes; the visualizer is a standalone static page at `/visualizer/` within the Pages base path. Entering an official instance number (1–100) loads its network and paired reference solution; a visitor can then upload their own solution. `web/scripts/prepare-assets.mjs` copies all official instance and reference solution pairs, selected plots from `images/selected_solution_images.txt`, matching example `.dat` downloads, benchmark ZIPs, the startup ZIP, and leaderboard JSON into generated public assets. Commit these source assets when updating the site; do not edit `web/public/` directly.
 
 Set the published Google Docs URL in `web/src/config.ts` when it is ready. Until then, the site shows a documentation placeholder. The Python startup kit is available as `mpvrp-cc-startup.zip` and on the homepage.
 

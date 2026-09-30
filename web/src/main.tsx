@@ -198,7 +198,7 @@ function Visualizer() {
   return (
     <main className="wrap main-content content">
       <PageHeading label="Interactive tool" title="Route visualizer">Inspect an instance and its solution by following vehicle routes, products, loads, and deliveries.</PageHeading>
-      <section className="text-section"><h2>Explore a solution</h2><p>The visualizer opens in a full-screen view so the map and route controls have room to work. Load an instance and its matching solution from your computer, or start with the bundled example. You can pan, zoom, follow vehicles, and inspect deliveries and loading costs.</p><p><a className="button is-link" href={`${import.meta.env.BASE_URL}visualizer/index.html`}>Open the visualizer ↗</a></p><p>Return to this site using the “Back to site” link in the visualizer. The visualization runs entirely in your browser.</p></section>
+      <section className="text-section"><h2>Explore an instance or solution</h2><p>Enter an official instance number from 1 to 100 to load its network and paired reference solution together. You can then upload your own solution file to inspect its routes, upload both files from your computer, or start with the built-in example. The full-screen view lets you pan, zoom, follow vehicles, and inspect deliveries and loading costs.</p><p><a className="button is-link" href={`${import.meta.env.BASE_URL}visualizer/index.html`}>Open the visualizer ↗</a></p><p>Return to this site using the “Back to site” link in the visualizer. The visualization runs entirely in your browser.</p></section>
     </main>
   );
 }
