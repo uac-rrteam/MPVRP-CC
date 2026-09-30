@@ -1,115 +1,56 @@
-# MPVRP-CC platform
+# MPVRP-CC
 
-Research and competition platform for the **Multi-Product Vehicle Routing
-Problem with Split Deliveries and Changeover Costs**.
+A research benchmark for the **Multi-Product Vehicle Routing Problem with Split Deliveries and Changeover Costs**. The site is a static React and TypeScript application published by GitHub Pages. GitHub Actions checks pull-request submissions and publishes accepted leaderboard results. No running server or Notion database is required.
 
-In this benchmark, a changeover cost represents the operational preparation
-associated with loading a product. It may apply before the first trip as well
-as between successive trips; it is not limited to the act of switching from
-one product to another.
+## Benchmark and scoring
 
-The repository deliberately separates two deployable surfaces:
+`data/instances/in/` contains the 100 official instances with changeover costs; `data/instances/out/` contains matched zero-cost variants. Reference solutions are in `data/solutions/in/` and `data/solutions/out/`. Downloadable benchmark ZIPs are in `data/zips/`. The official scorer uses the 100 `in/` instances and frozen reference objectives in `data/reference_scores.v1.json`.
 
-- the static GitHub Pages frontend at the repository root and in `pages/`;
-- the FastAPI service and domain logic in `backend/`.
+A feasible solution is scored by its recomputed distance plus changeover cost. Each official instance receives a percentage gap from its reference. Complete runs (100 feasible solutions) are ranked by mean gap. Partial runs appear in a separate table, ordered by feasible count and then mean gap. Each team's best run sets its rank; the site can also display its latest run. See [scoring rules](docs/scoring-v1.md), [problem statement](docs/problem.md), [instance format](docs/instance_format.md), and [solution format](docs/solution_format.md).
 
-The interactive route visualizer remains a standalone canvas application in
-`pages/visualisation.html`.
+## Site development
 
-## Benchmark scenarios
-
-`data/instances/` contains 100 one-to-one pairs:
-
-- `with_changeover_costs/` is the official dataset used for scoring;
-- `without_changeover_costs/` keeps the same UUID, fleet, locations, stocks and
-  demands, but replaces every transition cost by zero.
-
-The official score is the sum of `distance_total + total_switch_cost` across the
-100 original-cost instances. A ZIP submission may contain any subset of those
-solutions. Every recognized file is evaluated independently; missing, unresolved,
-unreadable and infeasible solutions all receive the same penalty of `100000`.
-
-A vehicle may visit a station at most once for a given product across its entire
-schedule. It may return to the same station on another trip only when serving a
-different product. Split deliveries for one station-product pair must therefore
-be shared between distinct vehicles.
-
-See [`docs/problem.md`](docs/problem.md),
-[`docs/instance_format.md`](docs/instance_format.md), and
-[`docs/solution_format.md`](docs/solution_format.md) for the canonical contract.
-
-## Structure
-
-```text
-backend/
-  app/                 FastAPI application and HTTP routes
-  core/generation/     structured random instance generation
-  core/model/          instance/solution parsing and strict feasibility checks
-  core/scoring/        secure ZIP ingestion and official evaluation
-  core/experiments/    paired scenarios and ex-post changeover repricing
-  database/            participant and scoreboard persistence
-data/instances/        paired benchmark datasets
-docs/                  Markdown sources used by the static documentation pages
-pages/                 GitHub Pages UI and JavaScript clients
-tests/                 unit and integration tests
-```
-
-## Backend setup
-
-Python 3.12 and `uv` are recommended.
+Requires Node.js 24 and npm.
 
 ```bash
-uv sync
-uv run uvicorn backend.app.main:app --reload
+cd web
+npm ci
+npm run dev
 ```
 
-The API is available on `http://127.0.0.1:8000`; OpenAPI documentation is at
-`/docs`.
+`npm run build` produces `web/dist/`. For the project Pages URL, build with `PAGES_BASE=/MPVRP-CC/ npm run build`. The React routes use URL hashes; the visualizer is a standalone static page at `/visualizer/` within the Pages base path. `web/scripts/prepare-assets.mjs` copies the selected plot pairs from `images/selected_solution_images.txt`, matching `.dat` downloads, benchmark ZIPs, the startup ZIP, and leaderboard JSON into generated public assets. Commit these source assets when updating the site; do not edit `web/public/` directly.
 
-Configure deployments with:
+Set the published Google Docs URL in `web/src/config.ts` when it is ready. Until then, the site shows a documentation placeholder. The Python startup kit is available as `mpvrp-cc-startup.zip` and on the homepage.
 
-```dotenv
-FRONTEND_DEV_URL=http://127.0.0.1:5500
-FRONTEND_PROD_URL=https://your-org.github.io
-FRONTEND_PROD_URL_2=https://your-custom-domain.example
-```
+## Submissions and publication
 
-## Static frontend
+Read [SUBMITTING.md](SUBMITTING.md) to create a pull request containing only `submission.json` and `solutions.zip` under `submissions/GITHUB_LOGIN/RUN_ID/`. The read-only `score-submission.yml` workflow checks it using trusted code from the base branch and uploads a JSON report. A maintainer reviews the result, then runs the **Publish accepted submission** workflow with the pull request number. That workflow rechecks the submission, appends a public run to `leaderboard/runs.json`, commits it to `main`, builds the site, and deploys it. Submitted ZIPs remain in the pull request branch and are not copied to Pages.
 
-The frontend has no build requirement. Serve the repository root with any static
-server, for example:
+To check the official references and leaderboard locally:
 
 ```bash
-python -m http.server 5500
+cd web
+npm run check:references
+npm run check:leaderboard
+npm run build
 ```
 
-Create the runtime API configuration before publishing:
+Repository maintainers must select **GitHub Actions** as the Pages build source in repository settings. The `deploy.yml` workflow builds and deploys on pushes to `main`. A custom-domain root deployment requires changing `PAGES_BASE` in both deployment workflows to `/`.
 
-```bash
-API_URL=https://api.example.org ./generate_config.sh
-```
+## Local Python tools
 
-The UI loads Tailwind CSS and the Inter/Bricolage Grotesque web fonts from their
-CDNs. Documentation pages fetch their Markdown source at runtime. The
-specification page provides an A4 print view; its “Download as PDF” action opens
-the browser print dialog, where it can be saved as PDF.
+`src/mpvrp/` and `src/tools/` are local participant and benchmark tools, separate from the site. They are also packaged in `mpvrp-cc-startup.zip`. Python 3.12 and `uv sync` install their dependencies. The Python checker is a local convenience; the TypeScript GitHub Action is authoritative for public submissions.
 
-## Tests
+## Repository map
 
-```bash
-uv run pytest
-```
-
-The suite validates the API, strict solution checks, generator, ZIP safety,
-scoreboard persistence and all 100 paired benchmark files.
-
-## Docker
-
-```bash
-docker build -t mpvrp-cc .
-docker run --rm -p 8000:8000 --env-file .env mpvrp-cc
-```
+- `web/`: React site, TypeScript scorer, asset preparation scripts.
+- `images/plots/`: example instance and solution plots selected by `images/selected_solution_images.txt`.
+- `data/`: benchmark instances, reference solutions and objectives, download ZIPs.
+- `leaderboard/runs.json`: versioned public accepted-run history.
+- `.github/workflows/`: read-only PR scoring, trusted publication, and Pages deployment.
+- `src/`: local Python startup tools.
+- `MIGRATION_PLAN.md`: migration decisions and progress.
 
 ## License
 
-See [`LICENSE`](LICENSE).
+See [LICENSE](LICENSE).

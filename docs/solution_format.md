@@ -16,7 +16,7 @@ Sol_001_s36_d8_p3.dat
 
 This is the canonical name generated and recognized by the repository tools. A submission archive may organize files in folders and may contain any subset of the instances from `001` to `100`. The platform identifies every recognized solution and evaluates it independently.
 
-Submitting all 100 solutions at once is not required. For the final score, an absent solution, an unresolved solution, and an invalid solution are treated in the same way: the corresponding instance receives a penalty of `100000`.
+Submitting all 100 solutions at once is not required. Under scoring version 1.0.0, absent, unresolved, and invalid solutions do not count as feasible. Complete and partial submissions are shown in separate tables; no fixed objective penalty is assigned. See [`scoring-v1.md`](scoring-v1.md) for the authoritative rules. The former Python service still uses its legacy raw-sum score during migration.
 
 ## 2. Describing a vehicle schedule
 
