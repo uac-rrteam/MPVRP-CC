@@ -1,0 +1,27 @@
+Recommended CP solution images for the website
+Scenario: 1 (instances with changeover costs)
+Each path is relative to the repository root.
+
+ID   Vehicles  Stations  Layout     Reason                                      Image
+097  1         9         corridor   Simple introduction                         results/plots/scenario_1/instance_097_cp_solution_landscape.png
+073  2         5         corridor   Clear two-route example                     results/plots/scenario_1/instance_073_cp_solution_landscape.png
+026  2         35        corridor   Two routes across many stations             results/plots/scenario_1/instance_026_cp_solution_landscape.png
+040  2         44        clustered  Dense two-vehicle case                      results/plots/scenario_1/instance_040_cp_solution_landscape.png
+094  4         4         corridor   Compact network                             results/plots/scenario_1/instance_094_cp_solution_landscape.png
+013  5         7         uniform    Small, distributed network                 results/plots/scenario_1/instance_013_cp_solution_landscape.png
+004  4         14        clustered  Mixed configuration                         results/plots/scenario_1/instance_004_cp_solution_landscape.png
+023  4         27        clustered  Medium scale, five products                 results/plots/scenario_1/instance_023_cp_solution_landscape.png
+070  5         14        clustered  Six products, high changeover cost          results/plots/scenario_1/instance_070_cp_solution_landscape.png
+011  5         47        corridor   Long, large network                         results/plots/scenario_1/instance_011_cp_solution_landscape.png
+099  4         48        clustered  Large clustered network                    results/plots/scenario_1/instance_099_cp_solution_landscape.png
+003  6         37        clustered  Many stations, two products                 results/plots/scenario_1/instance_003_cp_solution_landscape.png
+025  6         16        clustered  Six active routes                           results/plots/scenario_1/instance_025_cp_solution_landscape.png
+048  6         50        clustered  Largest station count                       results/plots/scenario_1/instance_048_cp_solution_landscape.png
+016  7         10        clustered  Seven vehicles, one depot                  results/plots/scenario_1/instance_016_cp_solution_landscape.png
+035  7         21        uniform    Seven active routes                         results/plots/scenario_1/instance_035_cp_solution_landscape.png
+074  7         44        corridor   Large, two-product case                    results/plots/scenario_1/instance_074_cp_solution_landscape.png
+002  8         3         corridor   Eight routes in a small network            results/plots/scenario_1/instance_002_cp_solution_landscape.png
+021  10        12        uniform    All ten vehicles active                    results/plots/scenario_1/instance_021_cp_solution_landscape.png
+072  10        48        clustered  Large, high-demand case                    results/plots/scenario_1/instance_072_cp_solution_landscape.png
+
+Vehicle and station counts describe each instance configuration. A solution may use fewer vehicles.

@@ -1,0 +1,1006 @@
+{
+  "scoring_version": "1.0.0",
+  "reference_set": "cost-bearing-in-2026-09-30",
+  "entries": [
+    {
+      "id": "001",
+      "instance": "MPVRP_001_s36_d8_p3.dat",
+      "instance_sha256": "17bf4370bae640a3cb37559f26b9d3ce09f7857eaf02602b24cc5b02e58b1c05",
+      "solution": "Sol_001_s36_d8_p3.dat",
+      "solution_sha256": "5a125ab71477187d6ec0420893d5584e5183280f5e87d70b2043913fc16e7e4a",
+      "distance": 3955.0,
+      "changeover": 6914.0,
+      "objective": 10869.0
+    },
+    {
+      "id": "002",
+      "instance": "MPVRP_002_s3_d6_p3.dat",
+      "instance_sha256": "a8b46029a8b86cd70af8ef4cea03da50b3eac7d99f3db57be9d225ea9505c8e2",
+      "solution": "Sol_002_s3_d6_p3.dat",
+      "solution_sha256": "897c26b78c027c5d5602c79956f553d05487f9d8c6d72918ab487b9e0c6943e1",
+      "distance": 1675.0,
+      "changeover": 23761.0,
+      "objective": 25436.0
+    },
+    {
+      "id": "003",
+      "instance": "MPVRP_003_s37_d2_p2.dat",
+      "instance_sha256": "eeeb2083818b012dbb9e20229f6b3b5601577882151c25b00e19aa76476d8dff",
+      "solution": "Sol_003_s37_d2_p2.dat",
+      "solution_sha256": "3dc0564a9194aed67ac7b81f414b53baf4c153ef2c9a84913f8daf51c88524bb",
+      "distance": 6549.0,
+      "changeover": 12863.0,
+      "objective": 19412.0
+    },
+    {
+      "id": "004",
+      "instance": "MPVRP_004_s14_d3_p4.dat",
+      "instance_sha256": "5ddc8713750aa0c3805fe7dfe887cc2d97907a90b7b925207849f32afa8f3fdc",
+      "solution": "Sol_004_s14_d3_p4.dat",
+      "solution_sha256": "59c8ad7156471f300cc87e215687fb719098c94e6efe847639de28ba96e7acd0",
+      "distance": 4448.0,
+      "changeover": 9960.0,
+      "objective": 14408.0
+    },
+    {
+      "id": "005",
+      "instance": "MPVRP_005_s36_d1_p3.dat",
+      "instance_sha256": "ab74c4ba43ec286c4e6951c558c34d90169ba54b53982a75b4f534e72f156a90",
+      "solution": "Sol_005_s36_d1_p3.dat",
+      "solution_sha256": "6f5f38ba945db006ec92efab524e554550a2cd285564b1a3e33b728263c50c69",
+      "distance": 6540.0,
+      "changeover": 9254.0,
+      "objective": 15794.0
+    },
+    {
+      "id": "006",
+      "instance": "MPVRP_006_s29_d7_p5.dat",
+      "instance_sha256": "9512494ff858bb10407564625929b003ba6cd5f604cc031e1fb7c4638dbf460a",
+      "solution": "Sol_006_s29_d7_p5.dat",
+      "solution_sha256": "8e22ad9592084ce5beb880d68fda1471ec90d561825589af053a9be5da5152f9",
+      "distance": 5892.0,
+      "changeover": 10146.0,
+      "objective": 16038.0
+    },
+    {
+      "id": "007",
+      "instance": "MPVRP_007_s29_d7_p3.dat",
+      "instance_sha256": "1c23ff19a774bed901a8018eb3db8cbb005a09b88179285cc611cff6db54968f",
+      "solution": "Sol_007_s29_d7_p3.dat",
+      "solution_sha256": "3da84f31c41c0c0371aec5a066e24030c3bd957c443ff741c786606eb46c4c05",
+      "distance": 4331.0,
+      "changeover": 17482.0,
+      "objective": 21813.0
+    },
+    {
+      "id": "008",
+      "instance": "MPVRP_008_s23_d7_p5.dat",
+      "instance_sha256": "1ec0ce4357aea5b32e26c8aeee620bb8b7efa49557e8b9f58499603d92e5006e",
+      "solution": "Sol_008_s23_d7_p5.dat",
+      "solution_sha256": "fca0d809eda75c492e3c83f828435944318fd86a05f749d7f7acab33f0927279",
+      "distance": 3896.0,
+      "changeover": 13901.0,
+      "objective": 17797.0
+    },
+    {
+      "id": "009",
+      "instance": "MPVRP_009_s11_d6_p3.dat",
+      "instance_sha256": "8901f54ccafb8f4e3460a9c62fdcdf9b9b0128c7fffc689ce52ad0937926a985",
+      "solution": "Sol_009_s11_d6_p3.dat",
+      "solution_sha256": "0e89d976510f8daafac1a492eb90275f2c53d529d14e428620d4be9081ddb2f0",
+      "distance": 2082.0,
+      "changeover": 8516.0,
+      "objective": 10598.0
+    },
+    {
+      "id": "010",
+      "instance": "MPVRP_010_s38_d6_p2.dat",
+      "instance_sha256": "26576256b0d86a954a9550f29113fc0589a8317379e64b5bc4abcc1e7d3c0736",
+      "solution": "Sol_010_s38_d6_p2.dat",
+      "solution_sha256": "8d659a40abef07f984a30c37f3d5e6f461deedcc7598963eb6071aa5ef93e670",
+      "distance": 2295.0,
+      "changeover": 4956.0,
+      "objective": 7251.0
+    },
+    {
+      "id": "011",
+      "instance": "MPVRP_011_s47_d3_p6.dat",
+      "instance_sha256": "acf230df45b00cc084e06eae81f83376743393dac6fb457bad4c70a171e2cf18",
+      "solution": "Sol_011_s47_d3_p6.dat",
+      "solution_sha256": "475a288ef0035c87b542bfd0e673901a93058c8db181885378cdc159080576ab",
+      "distance": 17347.0,
+      "changeover": 17959.0,
+      "objective": 35306.0
+    },
+    {
+      "id": "012",
+      "instance": "MPVRP_012_s29_d2_p5.dat",
+      "instance_sha256": "8986c2438c9ceaaa749eb46f5f3316e7ed5c9348c3d427a69001ecfb70e25cbd",
+      "solution": "Sol_012_s29_d2_p5.dat",
+      "solution_sha256": "5a590d807652f0e010cd474b35ea60d2d6f97588f9c905cfa9e9f18174f34dd4",
+      "distance": 6806.0,
+      "changeover": 13075.0,
+      "objective": 19881.0
+    },
+    {
+      "id": "013",
+      "instance": "MPVRP_013_s7_d2_p2.dat",
+      "instance_sha256": "a5fdf1382cf5fa91367c2cafd77b1b222e43e9f2959a63c0894ce8869ff37a69",
+      "solution": "Sol_013_s7_d2_p2.dat",
+      "solution_sha256": "76cb21279551b0115c7a8d1bdf0f5f022a9deec1875b336041b4657a46bba767",
+      "distance": 1153.0,
+      "changeover": 22434.0,
+      "objective": 23587.0
+    },
+    {
+      "id": "014",
+      "instance": "MPVRP_014_s42_d7_p3.dat",
+      "instance_sha256": "b7e4b0f2dab4da6cae8cff0eb4958c2bc954458daa88aaca171a85e4c869080f",
+      "solution": "Sol_014_s42_d7_p3.dat",
+      "solution_sha256": "4fe16e0c66b128f5188027dba53cb5aaa731f7eb0381f5d1c64de4dd8ec1e7bc",
+      "distance": 4585.0,
+      "changeover": 8794.0,
+      "objective": 13379.0
+    },
+    {
+      "id": "015",
+      "instance": "MPVRP_015_s20_d7_p2.dat",
+      "instance_sha256": "9156fcb620a557f57edcad7480c979d795b85375020748fb40c909b5a218e93c",
+      "solution": "Sol_015_s20_d7_p2.dat",
+      "solution_sha256": "e63a0cf61bce65a1c87fc9d805de3ff77966b4a00ef023d67bfb7c6cad3496b9",
+      "distance": 1398.0,
+      "changeover": 14722.0,
+      "objective": 16120.0
+    },
+    {
+      "id": "016",
+      "instance": "MPVRP_016_s10_d1_p2.dat",
+      "instance_sha256": "b80e6927bf5be7462f9066bb7ace0a549d592de7e1be0bea2dcbf474f600ec13",
+      "solution": "Sol_016_s10_d1_p2.dat",
+      "solution_sha256": "b7339beb0f39efc432b334b2332fe30a7be5e13833e8abffc3e77c47de140ee3",
+      "distance": 2599.0,
+      "changeover": 15594.0,
+      "objective": 18193.0
+    },
+    {
+      "id": "017",
+      "instance": "MPVRP_017_s32_d1_p6.dat",
+      "instance_sha256": "e8d3b972534f851770a46257b62d900dc103e564794aaa097f7d9ad9ba99c8bd",
+      "solution": "Sol_017_s32_d1_p6.dat",
+      "solution_sha256": "8f4d064731b62669b415cd24f998bf1644c6ca98e0953eb375c12b55372f981f",
+      "distance": 15735.0,
+      "changeover": 10945.0,
+      "objective": 26680.0
+    },
+    {
+      "id": "018",
+      "instance": "MPVRP_018_s34_d6_p4.dat",
+      "instance_sha256": "754906bb8442ec7164edc20dc3b9b9bfd67e84eb763509aa07cf0f1452dcc812",
+      "solution": "Sol_018_s34_d6_p4.dat",
+      "solution_sha256": "3974990d13fef7b3bbc3ceb713180fabd301243a00312e8519ed5caae01a12b6",
+      "distance": 7031.0,
+      "changeover": 9476.0,
+      "objective": 16507.0
+    },
+    {
+      "id": "019",
+      "instance": "MPVRP_019_s47_d3_p6.dat",
+      "instance_sha256": "36240d5e3e9a587d89e4a120b656b788474d705f7050bbc09d25dbd819fee3f1",
+      "solution": "Sol_019_s47_d3_p6.dat",
+      "solution_sha256": "cfb59dc79502ce548b70e40506658a0144ad6734cf0c8ffc6483d5dd8030f003",
+      "distance": 13552.0,
+      "changeover": 41511.0,
+      "objective": 55063.0
+    },
+    {
+      "id": "020",
+      "instance": "MPVRP_020_s9_d6_p4.dat",
+      "instance_sha256": "74c5c60488a2a53813a8ccdeadd6b146011e47fc6a855d8081a8381eba1d8f69",
+      "solution": "Sol_020_s9_d6_p4.dat",
+      "solution_sha256": "15a6148e6a150fcecdc33e933e22ed5a1fc63d6da1d56e7288c0388d3bbdc51f",
+      "distance": 2352.0,
+      "changeover": 34924.0,
+      "objective": 37276.0
+    },
+    {
+      "id": "021",
+      "instance": "MPVRP_021_s12_d3_p4.dat",
+      "instance_sha256": "bc1759163146a3f215f2a224bb276f4193bb2f103df2bac21a67a88eaeeca863",
+      "solution": "Sol_021_s12_d3_p4.dat",
+      "solution_sha256": "ffad97724985186ff22465d4bfb7842bae7a683ae3133092f0aa127e5beb557e",
+      "distance": 6025.0,
+      "changeover": 28183.0,
+      "objective": 34208.0
+    },
+    {
+      "id": "022",
+      "instance": "MPVRP_022_s19_d7_p3.dat",
+      "instance_sha256": "efd249b6e2b035523b11dcd3ebbe4e65b0c5b07bc4b67dc3f3158ec2c81af299",
+      "solution": "Sol_022_s19_d7_p3.dat",
+      "solution_sha256": "bf1f5d5d3934932587e4c78d0bf441b95ca5470cb24edb8390eea7b18e0c3d39",
+      "distance": 2420.0,
+      "changeover": 4327.0,
+      "objective": 6747.0
+    },
+    {
+      "id": "023",
+      "instance": "MPVRP_023_s27_d5_p5.dat",
+      "instance_sha256": "ed12b40d21bc8e76eef0aa60375b75670a182f1a44be8df5efe1ef77655ad937",
+      "solution": "Sol_023_s27_d5_p5.dat",
+      "solution_sha256": "ebee398ce2891547e7b56c5dfcc51032ecffec072b62f9a32b88771239ff3a19",
+      "distance": 5157.0,
+      "changeover": 8563.0,
+      "objective": 13720.0
+    },
+    {
+      "id": "024",
+      "instance": "MPVRP_024_s31_d4_p3.dat",
+      "instance_sha256": "5b10f6488baa46902391b9ed559e4d5fb051af3f46762ffd6c383503bbd6c3d6",
+      "solution": "Sol_024_s31_d4_p3.dat",
+      "solution_sha256": "33627c455ef0cd9a30d0f145f7bc4c01b74252c875626bc4d67b18f1fb8446e2",
+      "distance": 3532.0,
+      "changeover": 4086.0,
+      "objective": 7618.0
+    },
+    {
+      "id": "025",
+      "instance": "MPVRP_025_s16_d6_p4.dat",
+      "instance_sha256": "e54ef83acb889c2701d200caa854b9e528e035be981ec10e03af444ec117a479",
+      "solution": "Sol_025_s16_d6_p4.dat",
+      "solution_sha256": "68c198d41896d757e43800d1300d87cf15da5a60b967a35c42e3336f62126606",
+      "distance": 3222.0,
+      "changeover": 18216.0,
+      "objective": 21438.0
+    },
+    {
+      "id": "026",
+      "instance": "MPVRP_026_s35_d2_p2.dat",
+      "instance_sha256": "dc07217c1b26fbd9e445be8e7ae6ed1b5f62b382e4f7bf86714e31f0690ad90e",
+      "solution": "Sol_026_s35_d2_p2.dat",
+      "solution_sha256": "52b83a82c8ce8a2052ee67c548b99e7e1722a801ad9279e828e56001b6956cf3",
+      "distance": 4327.0,
+      "changeover": 18506.0,
+      "objective": 22833.0
+    },
+    {
+      "id": "027",
+      "instance": "MPVRP_027_s19_d6_p5.dat",
+      "instance_sha256": "a775e386c0835ee9d48b62090758fe07b2e0ee8f8dfcdb6aac51b3606a2aa2e0",
+      "solution": "Sol_027_s19_d6_p5.dat",
+      "solution_sha256": "c7e5875c540d268d359a1cb2f0cf5bddd4d70ba68f110d15a6d96cd0dff6d785",
+      "distance": 5327.0,
+      "changeover": 14285.0,
+      "objective": 19612.0
+    },
+    {
+      "id": "028",
+      "instance": "MPVRP_028_s11_d1_p4.dat",
+      "instance_sha256": "617b0f908fa707a5d215554ad6f3b6713eb3f4fbaff0c666a149644973dc6cdd",
+      "solution": "Sol_028_s11_d1_p4.dat",
+      "solution_sha256": "049580d4ff51a74e7dcb25ac8c160bb9cccd153e589af858b2b9bca0d867cb87",
+      "distance": 2996.0,
+      "changeover": 26213.0,
+      "objective": 29209.0
+    },
+    {
+      "id": "029",
+      "instance": "MPVRP_029_s32_d4_p3.dat",
+      "instance_sha256": "329b8e0edab4a328df2ae9e91861836d058de73d39ea7b27dc51bc186e238c7d",
+      "solution": "Sol_029_s32_d4_p3.dat",
+      "solution_sha256": "4c8e4b330dbf3a422f4828ac9c95958e0359ddc71f67a627a57f3cc7eaf96a38",
+      "distance": 10766.0,
+      "changeover": 63015.0,
+      "objective": 73781.0
+    },
+    {
+      "id": "030",
+      "instance": "MPVRP_030_s5_d6_p4.dat",
+      "instance_sha256": "4b21962a42e8560912f6d51d0735a9979b7ad935b4a94ecec48a0fabe68e7d92",
+      "solution": "Sol_030_s5_d6_p4.dat",
+      "solution_sha256": "8939b5c61e70c0e12256ab26e0b122e33c2d032f184eb29fb31495ced243adc4",
+      "distance": 1573.0,
+      "changeover": 24888.0,
+      "objective": 26461.0
+    },
+    {
+      "id": "031",
+      "instance": "MPVRP_031_s46_d1_p4.dat",
+      "instance_sha256": "9f4529d0ec590e7b5f497a8d6d9b142bbbcd5fed98519e9d84e31e3e4f4e3864",
+      "solution": "Sol_031_s46_d1_p4.dat",
+      "solution_sha256": "858196b18467616e2603276d5a6e2f94f3b5833a252c978a01dc54984bf71533",
+      "distance": 23885.0,
+      "changeover": 23435.0,
+      "objective": 47320.0
+    },
+    {
+      "id": "032",
+      "instance": "MPVRP_032_s45_d2_p3.dat",
+      "instance_sha256": "81e8034c82b4401251b3c20860a5f528a6db21b0de73ab82e4d098fcedc40c27",
+      "solution": "Sol_032_s45_d2_p3.dat",
+      "solution_sha256": "d2c34c2e91b8f9dedfabc7ef16a31b5ae06159bbd757c84ffa2431e33ab7db5c",
+      "distance": 6411.0,
+      "changeover": 7929.0,
+      "objective": 14340.0
+    },
+    {
+      "id": "033",
+      "instance": "MPVRP_033_s10_d7_p6.dat",
+      "instance_sha256": "bf0d9c9d414e4f7c9cad8e170c4391ed4bd7b1f3e3f4491ef8077f20345b8a66",
+      "solution": "Sol_033_s10_d7_p6.dat",
+      "solution_sha256": "97b113deeaa264105082757aa8834ed1d74890ebca7bb8e7f9fc9945568e4fae",
+      "distance": 7402.0,
+      "changeover": 250538.0,
+      "objective": 257940.0
+    },
+    {
+      "id": "034",
+      "instance": "MPVRP_034_s13_d1_p6.dat",
+      "instance_sha256": "1f747bd90de6470d063356b92f29f25f4e0741b1aeb74750113e386224bb0525",
+      "solution": "Sol_034_s13_d1_p6.dat",
+      "solution_sha256": "3c90913c187b7f5b5f81ffeac225ddc13b7f2dc65eb2b83b5c487567249573b9",
+      "distance": 4159.0,
+      "changeover": 11627.0,
+      "objective": 15786.0
+    },
+    {
+      "id": "035",
+      "instance": "MPVRP_035_s21_d6_p6.dat",
+      "instance_sha256": "e53797c4805539905794ce61c6254b4bc15d38775d035a7192b1acfb50022713",
+      "solution": "Sol_035_s21_d6_p6.dat",
+      "solution_sha256": "3b3344cfa58871a6457ec488a3bd2694cfce9d2eea302894361adde9dd419093",
+      "distance": 5223.0,
+      "changeover": 84808.0,
+      "objective": 90031.0
+    },
+    {
+      "id": "036",
+      "instance": "MPVRP_036_s14_d3_p6.dat",
+      "instance_sha256": "cc0b2dbb214acc673488833478c618cabe149c57ab4eeb285b7b706ad4cdfcb6",
+      "solution": "Sol_036_s14_d3_p6.dat",
+      "solution_sha256": "63c783b27c9e29f486da28ec38744c19b4866be4c864b403ff1bd249aea11baf",
+      "distance": 4833.0,
+      "changeover": 45647.0,
+      "objective": 50480.0
+    },
+    {
+      "id": "037",
+      "instance": "MPVRP_037_s23_d7_p6.dat",
+      "instance_sha256": "2ca0033fe367d2542eefab4f4675c187f6e7bcfe9fd8490f17bd8acb67d91937",
+      "solution": "Sol_037_s23_d7_p6.dat",
+      "solution_sha256": "65adf685c7b3e8a1575436999fba64400b5e2086f5ee4ac38a16d6b4694ca09f",
+      "distance": 6541.0,
+      "changeover": 43881.0,
+      "objective": 50422.0
+    },
+    {
+      "id": "038",
+      "instance": "MPVRP_038_s11_d1_p3.dat",
+      "instance_sha256": "4aa99d9ba2916220097cf352850c94b1c336c88d42322916d20d14cc8a9277d3",
+      "solution": "Sol_038_s11_d1_p3.dat",
+      "solution_sha256": "f852bfa4c43188e18a55936fb6f9333103511a7f7eabbc18b354e0691f0db664",
+      "distance": 3209.0,
+      "changeover": 41717.0,
+      "objective": 44926.0
+    },
+    {
+      "id": "039",
+      "instance": "MPVRP_039_s24_d4_p3.dat",
+      "instance_sha256": "89916368f74119eb5e28b86f6e41862b8368407618ee6dc829c7fdbb0be0fec4",
+      "solution": "Sol_039_s24_d4_p3.dat",
+      "solution_sha256": "9cfeb3a578bfbd0a6a9998a7b9f799260836a81cd2bc3e46d7a6b388ce4dea87",
+      "distance": 3398.0,
+      "changeover": 7479.0,
+      "objective": 10877.0
+    },
+    {
+      "id": "040",
+      "instance": "MPVRP_040_s44_d8_p6.dat",
+      "instance_sha256": "aa539f8037a5ed0a5a6827b0a44decfc3e45a865e1578b596cb9968366e576e1",
+      "solution": "Sol_040_s44_d8_p6.dat",
+      "solution_sha256": "0e87c1ac6d092dccfdf4b301100db8bd67f4fdb4824b1be914c54343b24d5ebd",
+      "distance": 6327.0,
+      "changeover": 16543.0,
+      "objective": 22870.0
+    },
+    {
+      "id": "041",
+      "instance": "MPVRP_041_s48_d5_p2.dat",
+      "instance_sha256": "4973805746e501389639299ac1cc13fc85e95807fff1eb64fc4d482318fb65ab",
+      "solution": "Sol_041_s48_d5_p2.dat",
+      "solution_sha256": "e27cdf55e6754feb4f11a1279d6554867a0b5aa4516eef6a5311c1b6a1465d21",
+      "distance": 10145.0,
+      "changeover": 42132.0,
+      "objective": 52277.0
+    },
+    {
+      "id": "042",
+      "instance": "MPVRP_042_s23_d2_p2.dat",
+      "instance_sha256": "5e7323e8891352e27ffd23292e4a08476b5bc0a63f0bdd851389ca38a7481ee0",
+      "solution": "Sol_042_s23_d2_p2.dat",
+      "solution_sha256": "d635130695d4e3550f417d4cff8ae8919f1e84431d145361284b34b489315dbc",
+      "distance": 3540.0,
+      "changeover": 2193.0,
+      "objective": 5733.0
+    },
+    {
+      "id": "043",
+      "instance": "MPVRP_043_s33_d1_p3.dat",
+      "instance_sha256": "13ee6b5fd3b831648e6704dab3ce5cce8fee962ef9b177d6dfc31d294b49cbf1",
+      "solution": "Sol_043_s33_d1_p3.dat",
+      "solution_sha256": "ddbae6537704e198a7e9465f92b981f609a724a3a1feee19909ebd226cb59fb5",
+      "distance": 4020.0,
+      "changeover": 14443.0,
+      "objective": 18463.0
+    },
+    {
+      "id": "044",
+      "instance": "MPVRP_044_s38_d7_p5.dat",
+      "instance_sha256": "98eb52896188eff4182297b99c3f29b7c8adf9a4696350d18b79cb2dbcd1bd37",
+      "solution": "Sol_044_s38_d7_p5.dat",
+      "solution_sha256": "12b7b694ed3154aa9c60ffde82f411206d2ae30d1c5d5e2f25d0eabc767e0ba4",
+      "distance": 4692.0,
+      "changeover": 16342.0,
+      "objective": 21034.0
+    },
+    {
+      "id": "045",
+      "instance": "MPVRP_045_s4_d8_p2.dat",
+      "instance_sha256": "75d22ab7d2b036a1114c94e5d98c2e1c4159c978011f2167441827c250d8674d",
+      "solution": "Sol_045_s4_d8_p2.dat",
+      "solution_sha256": "dbdaa6a2b31d3bc4e1166ac95970896885828e8bb37625b1000373a7151e9ef4",
+      "distance": 545.0,
+      "changeover": 14870.0,
+      "objective": 15415.0
+    },
+    {
+      "id": "046",
+      "instance": "MPVRP_046_s9_d1_p3.dat",
+      "instance_sha256": "21177db7786fb36c979de2202f035eae544dc0118d028a01e6a2c7f78e3a73a6",
+      "solution": "Sol_046_s9_d1_p3.dat",
+      "solution_sha256": "1c98d6c5954e09dec8cf3e274237a9bfd38ab5bc7e2517ab5336b87e1c9012bc",
+      "distance": 3362.0,
+      "changeover": 84858.0,
+      "objective": 88220.0
+    },
+    {
+      "id": "047",
+      "instance": "MPVRP_047_s45_d8_p2.dat",
+      "instance_sha256": "f73d3cfc019944a414175ba422746102626d3b45ba3e109c396e9c088810160e",
+      "solution": "Sol_047_s45_d8_p2.dat",
+      "solution_sha256": "d7fd34902dc285cb96e82124b2f550e050e84a39919ec8fcaba101255a8a2c3b",
+      "distance": 2273.0,
+      "changeover": 2914.0,
+      "objective": 5187.0
+    },
+    {
+      "id": "048",
+      "instance": "MPVRP_048_s50_d8_p6.dat",
+      "instance_sha256": "a2c1917d8eb26ecf3f3212e90068d3f838079131293a55edc60b278e7f809021",
+      "solution": "Sol_048_s50_d8_p6.dat",
+      "solution_sha256": "d5a98441c0bf515b4bb4bc316f4b34511b04d9fcb73e9e43132c59d6945bef5e",
+      "distance": 26752.0,
+      "changeover": 43628.0,
+      "objective": 70380.0
+    },
+    {
+      "id": "049",
+      "instance": "MPVRP_049_s26_d6_p2.dat",
+      "instance_sha256": "cc0e89db096419043197356d01b5f3185675334e65f2b2df948343e8f07833ff",
+      "solution": "Sol_049_s26_d6_p2.dat",
+      "solution_sha256": "b985ee8929d9a6a0ce026619f267f45f7ffb2d88dd50bb0230ba20e181006e47",
+      "distance": 2011.0,
+      "changeover": 14012.0,
+      "objective": 16023.0
+    },
+    {
+      "id": "050",
+      "instance": "MPVRP_050_s12_d4_p3.dat",
+      "instance_sha256": "d434741677442596483d868ec92177066704aa3d45291b99f98c796675344ba8",
+      "solution": "Sol_050_s12_d4_p3.dat",
+      "solution_sha256": "3172f8d1716d7baeed149b449883dade557493a4ad5bff75b89d8c0f0d235113",
+      "distance": 2221.0,
+      "changeover": 22268.0,
+      "objective": 24489.0
+    },
+    {
+      "id": "051",
+      "instance": "MPVRP_051_s14_d7_p4.dat",
+      "instance_sha256": "0c8f8806a45e5e8be87ed2556577492a629987320b310065b331add711afe4b2",
+      "solution": "Sol_051_s14_d7_p4.dat",
+      "solution_sha256": "762c2c33dab9f018682feaf53fe0c953403fb39160b9cb5eec02f03f8bbc592e",
+      "distance": 3991.0,
+      "changeover": 27427.0,
+      "objective": 31418.0
+    },
+    {
+      "id": "052",
+      "instance": "MPVRP_052_s10_d3_p6.dat",
+      "instance_sha256": "2891ebd0a6e0b0133d1a56a3c972e9db15a374a8805a6fcb562d5656b949b0e8",
+      "solution": "Sol_052_s10_d3_p6.dat",
+      "solution_sha256": "6518473d78144b5a93e0560ccb3e7ab40efab0c2d4a7461490c36dc607343668",
+      "distance": 3906.0,
+      "changeover": 101665.0,
+      "objective": 105571.0
+    },
+    {
+      "id": "053",
+      "instance": "MPVRP_053_s11_d3_p2.dat",
+      "instance_sha256": "a564895e7c06c91dd122ac84dc453519c6f5457354c44d86a2a4f9f78cfed1ad",
+      "solution": "Sol_053_s11_d3_p2.dat",
+      "solution_sha256": "078d2c198f3b5465314ed56f50b65298371171f8d542e09c675bec871ac67133",
+      "distance": 998.0,
+      "changeover": 13084.0,
+      "objective": 14082.0
+    },
+    {
+      "id": "054",
+      "instance": "MPVRP_054_s21_d4_p5.dat",
+      "instance_sha256": "c8f9363503b55a7e4b89f8fbde9482ceb9d8d0fc22571de975734bd5bd8faf88",
+      "solution": "Sol_054_s21_d4_p5.dat",
+      "solution_sha256": "601836855e394df852c19afced59e75a8358990bf12f0700d2637cc42eea5291",
+      "distance": 4760.0,
+      "changeover": 11397.0,
+      "objective": 16157.0
+    },
+    {
+      "id": "055",
+      "instance": "MPVRP_055_s25_d8_p2.dat",
+      "instance_sha256": "d25093f1481dfb2e5061a552fe5f522f375fbfd48ffa0133a5cc3a26e9c90c0c",
+      "solution": "Sol_055_s25_d8_p2.dat",
+      "solution_sha256": "0d9d22864d16a08f551f29ede615efde177d045922092b0650885aacf85e66de",
+      "distance": 1478.0,
+      "changeover": 5648.0,
+      "objective": 7126.0
+    },
+    {
+      "id": "056",
+      "instance": "MPVRP_056_s23_d8_p3.dat",
+      "instance_sha256": "056448691b3880763e6169ef63070bebb97e57d049a8e8f2f261dd76f615f7a1",
+      "solution": "Sol_056_s23_d8_p3.dat",
+      "solution_sha256": "bcd7739e2201cf83181548466dd8bf39ebf23603fb581b8b67fd063c11e26655",
+      "distance": 2829.0,
+      "changeover": 4444.0,
+      "objective": 7273.0
+    },
+    {
+      "id": "057",
+      "instance": "MPVRP_057_s23_d5_p4.dat",
+      "instance_sha256": "93f6e3b582303755ea16d0d007d1cb06b66bdf6be8b2bf4bce98134f2afdeea5",
+      "solution": "Sol_057_s23_d5_p4.dat",
+      "solution_sha256": "5f71b99e29a5362a68a08f512df14283a3a9aecee2b9d06780c3413aef5a5ed6",
+      "distance": 2152.0,
+      "changeover": 6249.0,
+      "objective": 8401.0
+    },
+    {
+      "id": "058",
+      "instance": "MPVRP_058_s18_d2_p2.dat",
+      "instance_sha256": "903c1ad68aa30fcdd00346bc109ca3f3543b9c5a6609b5a18333e833301ff041",
+      "solution": "Sol_058_s18_d2_p2.dat",
+      "solution_sha256": "ecc3256f1ee913eb8adc90c5846e6e7dff7ebe1708672b63f2e513f793ca7cd1",
+      "distance": 1389.0,
+      "changeover": 7623.0,
+      "objective": 9012.0
+    },
+    {
+      "id": "059",
+      "instance": "MPVRP_059_s15_d8_p5.dat",
+      "instance_sha256": "15ba3f1c3182b39952494e4d14199faf5fe070c6f57ddce8086f9664d631ecf7",
+      "solution": "Sol_059_s15_d8_p5.dat",
+      "solution_sha256": "30ef59c03e3448ccaa0a589565a2becad26b680e81e013a8b0738dbe4bf4cad5",
+      "distance": 3963.0,
+      "changeover": 44196.0,
+      "objective": 48159.0
+    },
+    {
+      "id": "060",
+      "instance": "MPVRP_060_s7_d4_p3.dat",
+      "instance_sha256": "d8bee9157dabbc0e68dd39766d52b3d618eaa347c322d8aca8fd7b86896535e5",
+      "solution": "Sol_060_s7_d4_p3.dat",
+      "solution_sha256": "0eb92ff67be65fd21e89170203b8d66ccd12af355614898bf51b39c0ec18e0d3",
+      "distance": 1912.0,
+      "changeover": 11275.0,
+      "objective": 13187.0
+    },
+    {
+      "id": "061",
+      "instance": "MPVRP_061_s31_d5_p2.dat",
+      "instance_sha256": "a82569f86d9c3002eb6b26d4f90b41ead1af134f2ea199e09fe975ad58367845",
+      "solution": "Sol_061_s31_d5_p2.dat",
+      "solution_sha256": "71f17c9430c2e0a2c7e8cec6b155ed61f4f85c6a832404123717e4be29371714",
+      "distance": 4021.0,
+      "changeover": 5544.0,
+      "objective": 9565.0
+    },
+    {
+      "id": "062",
+      "instance": "MPVRP_062_s16_d3_p3.dat",
+      "instance_sha256": "5c214370313ed93c1cab7add09fe27a6d7ed7e6307348fcaf00be68b98c517af",
+      "solution": "Sol_062_s16_d3_p3.dat",
+      "solution_sha256": "2f729feeedde3ef9bfea409df3104d574c55f257fe8c382d152ea8f0dc94a211",
+      "distance": 1701.0,
+      "changeover": 52868.0,
+      "objective": 54569.0
+    },
+    {
+      "id": "063",
+      "instance": "MPVRP_063_s36_d7_p4.dat",
+      "instance_sha256": "dac8ed96a9e910c18742307fb0d9bd5a8ebfde8e134693d053bcfce837f28587",
+      "solution": "Sol_063_s36_d7_p4.dat",
+      "solution_sha256": "c722b63704ceef96ef70f49cc28e9f86af8f9a68474049600db54205cbb344b3",
+      "distance": 3775.0,
+      "changeover": 8154.0,
+      "objective": 11929.0
+    },
+    {
+      "id": "064",
+      "instance": "MPVRP_064_s28_d7_p3.dat",
+      "instance_sha256": "a9f9723472cba89fe383feb4cbd8331be38235ae8be69a33eb4e8eb9a063c723",
+      "solution": "Sol_064_s28_d7_p3.dat",
+      "solution_sha256": "76fbf0c9720316bcd2e745afeb215ce94d1e98e2b603cdefa9d60d38ad681bc4",
+      "distance": 4006.0,
+      "changeover": 2961.0,
+      "objective": 6967.0
+    },
+    {
+      "id": "065",
+      "instance": "MPVRP_065_s42_d8_p3.dat",
+      "instance_sha256": "dd4b42cd22010f825790bcbb6ac3a49447e41aa3a667d15640c960f45d527ca6",
+      "solution": "Sol_065_s42_d8_p3.dat",
+      "solution_sha256": "0d7c3015728dfb00668de3b019c9f568ec129bd70011a708fd87907d8f8bee8b",
+      "distance": 2605.0,
+      "changeover": 16151.0,
+      "objective": 18756.0
+    },
+    {
+      "id": "066",
+      "instance": "MPVRP_066_s17_d2_p2.dat",
+      "instance_sha256": "a7224cd75eae4b5620ea2d6dd513fb873ef661f40d65a4870939af3cce2c379a",
+      "solution": "Sol_066_s17_d2_p2.dat",
+      "solution_sha256": "3b0b4205308eb6b32b82e8e87beff39932c08c2b09cf3f7df3e6b7747ffc2f38",
+      "distance": 1416.0,
+      "changeover": 12011.0,
+      "objective": 13427.0
+    },
+    {
+      "id": "067",
+      "instance": "MPVRP_067_s11_d8_p3.dat",
+      "instance_sha256": "02288a46e882f41d983483117b49c2b9683d07355f204824fb9079fcb0664058",
+      "solution": "Sol_067_s11_d8_p3.dat",
+      "solution_sha256": "a4ee79908c5b09052669c444fa1425767a83e7e8f1c5dc3700f15b55a10d4437",
+      "distance": 1453.0,
+      "changeover": 39696.0,
+      "objective": 41149.0
+    },
+    {
+      "id": "068",
+      "instance": "MPVRP_068_s19_d3_p3.dat",
+      "instance_sha256": "155c7e11056a8fb4a37ac130cb0550ca08fe4223e651c3ca4a107bb78462a6e6",
+      "solution": "Sol_068_s19_d3_p3.dat",
+      "solution_sha256": "866fc76243956ffb3da86419f71013d5c73040396b943fbee35e5f284fa487c2",
+      "distance": 4040.0,
+      "changeover": 8243.0,
+      "objective": 12283.0
+    },
+    {
+      "id": "069",
+      "instance": "MPVRP_069_s14_d3_p5.dat",
+      "instance_sha256": "9ab8fd4cdc6f5432df344e567fcc352774ed6c7b1b2ebb1d9e5f2088c083cf88",
+      "solution": "Sol_069_s14_d3_p5.dat",
+      "solution_sha256": "6c360eeca245f1593c6206bd5a7ef84b207a37133815e84ff9ecee0849a61fed",
+      "distance": 3162.0,
+      "changeover": 10235.0,
+      "objective": 13397.0
+    },
+    {
+      "id": "070",
+      "instance": "MPVRP_070_s14_d2_p6.dat",
+      "instance_sha256": "0610cd56b5c5b28615164be4c0cd7de8a20d3337864237c33815265971432c22",
+      "solution": "Sol_070_s14_d2_p6.dat",
+      "solution_sha256": "436dc0cc98db9f8547e1796ec2f5b36c9d4b598658660b3d2d8fe6e5bccb15b4",
+      "distance": 7186.0,
+      "changeover": 76236.0,
+      "objective": 83422.0
+    },
+    {
+      "id": "071",
+      "instance": "MPVRP_071_s19_d5_p4.dat",
+      "instance_sha256": "353a09deff13d8be11bf51753605f83be1d53ced14fb80cb4c66c8fe8b7537b8",
+      "solution": "Sol_071_s19_d5_p4.dat",
+      "solution_sha256": "a532dd4691083a7bffce6417ea8ccdd80a91297554d6b20b8f8b17f9074eee46",
+      "distance": 2091.0,
+      "changeover": 43575.0,
+      "objective": 45666.0
+    },
+    {
+      "id": "072",
+      "instance": "MPVRP_072_s48_d4_p3.dat",
+      "instance_sha256": "70372593e00336619332c2a46fc781e286538aa44ab36db8a6241d20184dda56",
+      "solution": "Sol_072_s48_d4_p3.dat",
+      "solution_sha256": "8d448d1f91a16f8d0d21425232f74c510730ab9225dc47d6fa97edb1bf705732",
+      "distance": 12413.0,
+      "changeover": 54441.0,
+      "objective": 66854.0
+    },
+    {
+      "id": "073",
+      "instance": "MPVRP_073_s5_d6_p3.dat",
+      "instance_sha256": "9f28ef3231a5700c6280e26c92031f97554dd0f426d669bff6b7e04af70618b0",
+      "solution": "Sol_073_s5_d6_p3.dat",
+      "solution_sha256": "a769d4d739c99b1ed4e0f4978c08141afbc38082253bf1b0b3313d6ba919f47d",
+      "distance": 1049.0,
+      "changeover": 10145.0,
+      "objective": 11194.0
+    },
+    {
+      "id": "074",
+      "instance": "MPVRP_074_s44_d8_p2.dat",
+      "instance_sha256": "5932812dd25ade45765e6df4da5aa3f773bc94c642b838aa89358066b3ef0d3f",
+      "solution": "Sol_074_s44_d8_p2.dat",
+      "solution_sha256": "e645eb65999237dfd6eca4097c43926132e0cd0fedcaf9c5605dfda7ba39efc6",
+      "distance": 5894.0,
+      "changeover": 7446.0,
+      "objective": 13340.0
+    },
+    {
+      "id": "075",
+      "instance": "MPVRP_075_s8_d1_p5.dat",
+      "instance_sha256": "d85f1bc494248d469c1e9fcce23b341a7c22dafbe5b5619d3d4e27a067a24df1",
+      "solution": "Sol_075_s8_d1_p5.dat",
+      "solution_sha256": "36840871a9aa6ea82918de76076e996645dbcdbf890f8e0413fe4f9a5877e1be",
+      "distance": 4867.0,
+      "changeover": 8525.0,
+      "objective": 13392.0
+    },
+    {
+      "id": "076",
+      "instance": "MPVRP_076_s42_d1_p5.dat",
+      "instance_sha256": "72d3b8281dc2d91ebe5a078d84ba7244fd3e0dfc0158661c792a8a46a8e03d6d",
+      "solution": "Sol_076_s42_d1_p5.dat",
+      "solution_sha256": "b3830fa85b934424380cbbb940c2badc1473996c6b8069682bb16d5bd226f882",
+      "distance": 6562.0,
+      "changeover": 18601.0,
+      "objective": 25163.0
+    },
+    {
+      "id": "077",
+      "instance": "MPVRP_077_s9_d1_p3.dat",
+      "instance_sha256": "31402333107bff37e8c22b712d9950f0ada9c274812ab24a8512bb19b09ecc9a",
+      "solution": "Sol_077_s9_d1_p3.dat",
+      "solution_sha256": "1381242fc03df010ce96b84370e4e4171057c721dfd0455e6afd5ad5247896c1",
+      "distance": 3352.0,
+      "changeover": 13802.0,
+      "objective": 17154.0
+    },
+    {
+      "id": "078",
+      "instance": "MPVRP_078_s9_d7_p3.dat",
+      "instance_sha256": "f94934f0c3d8573a57c531f58dac2afc589317dd78b403882b95864d35e0ba57",
+      "solution": "Sol_078_s9_d7_p3.dat",
+      "solution_sha256": "348e86fbb86d2b7c9ac2f386cde4072ddfa6410198c223e1db7f5e0cfc95da77",
+      "distance": 2732.0,
+      "changeover": 54206.0,
+      "objective": 56938.0
+    },
+    {
+      "id": "079",
+      "instance": "MPVRP_079_s25_d3_p6.dat",
+      "instance_sha256": "7ee0338584c9d33dd3301923516d4b8dbd7b3b5e7362a246b7e0df54c92dbe34",
+      "solution": "Sol_079_s25_d3_p6.dat",
+      "solution_sha256": "f0c02bb57557faed091c3fe42e38c3ce06d5523e2bb32eaa9839f3b8a475427d",
+      "distance": 20768.0,
+      "changeover": 38912.0,
+      "objective": 59680.0
+    },
+    {
+      "id": "080",
+      "instance": "MPVRP_080_s33_d6_p5.dat",
+      "instance_sha256": "96464e0274407fffa8e9d14708c2c3b9dad7726b57e9125f918cbac08fa0a3f9",
+      "solution": "Sol_080_s33_d6_p5.dat",
+      "solution_sha256": "78a8a2d8054b138834a1244e9c198f03b0b17f6fd9acffbb48150bd1bcc5e450",
+      "distance": 7209.0,
+      "changeover": 18212.0,
+      "objective": 25421.0
+    },
+    {
+      "id": "081",
+      "instance": "MPVRP_081_s21_d1_p6.dat",
+      "instance_sha256": "2b6ec827d9b17627556e04fda4e082e6f36966cc75eab18c7c533af23722ded6",
+      "solution": "Sol_081_s21_d1_p6.dat",
+      "solution_sha256": "500ce2eb04849d21ec18f2fdca95e29f2f665df68bc80aa4b42d1a14d941289d",
+      "distance": 11602.0,
+      "changeover": 38723.0,
+      "objective": 50325.0
+    },
+    {
+      "id": "082",
+      "instance": "MPVRP_082_s12_d1_p3.dat",
+      "instance_sha256": "6129cb6dcf84776ed1532d03041d88834b3e2c16c78cc8610488a4c47f6c4baf",
+      "solution": "Sol_082_s12_d1_p3.dat",
+      "solution_sha256": "479538cb5b639113b617979b7f1e9edd1edabc1b583c733bd6e73b243f7f778c",
+      "distance": 1084.0,
+      "changeover": 9280.0,
+      "objective": 10364.0
+    },
+    {
+      "id": "083",
+      "instance": "MPVRP_083_s42_d2_p2.dat",
+      "instance_sha256": "8d7d57447337a8ed177f1871ce67ce8b1004cedb37b1ed84f757d5fd201f1198",
+      "solution": "Sol_083_s42_d2_p2.dat",
+      "solution_sha256": "6b9111d92dc41c728f6f55edce4eadb83fe46637621d59c4c70315e6270d918b",
+      "distance": 12469.0,
+      "changeover": 32081.0,
+      "objective": 44550.0
+    },
+    {
+      "id": "084",
+      "instance": "MPVRP_084_s41_d2_p5.dat",
+      "instance_sha256": "8e43a298c98ef8a9d20f27cb93098bed5ca36bcf6855d6d82149d9c5ce71ec48",
+      "solution": "Sol_084_s41_d2_p5.dat",
+      "solution_sha256": "640f137258b3f49bb7c386914a9061618396166661c481ec0647ecf65c72a0be",
+      "distance": 8076.0,
+      "changeover": 12798.0,
+      "objective": 20874.0
+    },
+    {
+      "id": "085",
+      "instance": "MPVRP_085_s47_d7_p5.dat",
+      "instance_sha256": "f074b9cb66a37f34c7dec373e9f4ee6eaebc885eae9f4874ae3ffa7032649ac4",
+      "solution": "Sol_085_s47_d7_p5.dat",
+      "solution_sha256": "2233fe78b1dde1bab0432013b6d88ce7e440a09cbf832506e93bd14e78d1a6d5",
+      "distance": 8584.0,
+      "changeover": 25690.0,
+      "objective": 34274.0
+    },
+    {
+      "id": "086",
+      "instance": "MPVRP_086_s50_d6_p2.dat",
+      "instance_sha256": "ad496a7bbe50b93b8136e25dbdaf088f21f9c213f7c82126f355099bf889591f",
+      "solution": "Sol_086_s50_d6_p2.dat",
+      "solution_sha256": "3ee5825ee74683cc079d39cfca20a5e84cd31d4c2df02ccd7ce8db426e2ad0df",
+      "distance": 1810.0,
+      "changeover": 10116.0,
+      "objective": 11926.0
+    },
+    {
+      "id": "087",
+      "instance": "MPVRP_087_s30_d6_p5.dat",
+      "instance_sha256": "2b7e8467aed60c411b741603f8a02ba22427e44b5567896b5a97efda8f4f7ab7",
+      "solution": "Sol_087_s30_d6_p5.dat",
+      "solution_sha256": "7dc69d322ae584eb3c11abb3f7bc18d8b3cee9700ccc2eb82ae2402b22e3523d",
+      "distance": 3678.0,
+      "changeover": 11697.0,
+      "objective": 15375.0
+    },
+    {
+      "id": "088",
+      "instance": "MPVRP_088_s50_d8_p5.dat",
+      "instance_sha256": "ae428caa49010cc78d3c24135f434e17ea56ec96ec722fce5645c85f90b42169",
+      "solution": "Sol_088_s50_d8_p5.dat",
+      "solution_sha256": "a27c2d62b3ab45a1230fd97ae79c089f62ae6284db7d0ba3d06c8d6cbd93fa92",
+      "distance": 6185.0,
+      "changeover": 18174.0,
+      "objective": 24359.0
+    },
+    {
+      "id": "089",
+      "instance": "MPVRP_089_s14_d2_p2.dat",
+      "instance_sha256": "55d4fe9bcf674c5ea02b53741af53cd9184a1c43669ef71a1dd722c33c9d12c7",
+      "solution": "Sol_089_s14_d2_p2.dat",
+      "solution_sha256": "7d33b6a8791cd0a00b152568da882dd79a4dc331a84b597ac7be714701ca9842",
+      "distance": 3836.0,
+      "changeover": 10389.0,
+      "objective": 14225.0
+    },
+    {
+      "id": "090",
+      "instance": "MPVRP_090_s13_d5_p5.dat",
+      "instance_sha256": "3d0758ff0055990aad4e2576d28ce0a691bacf147cf52a702c4168139c36c8b1",
+      "solution": "Sol_090_s13_d5_p5.dat",
+      "solution_sha256": "286d6b83c19872b82e20540b1b583d1f747e433364f3f80a1405629044e50c37",
+      "distance": 2733.0,
+      "changeover": 10982.0,
+      "objective": 13715.0
+    },
+    {
+      "id": "091",
+      "instance": "MPVRP_091_s4_d2_p3.dat",
+      "instance_sha256": "d8dbcd837fed579c38ecdf90edb8b39705e59329bdf3278388244c4378a0f431",
+      "solution": "Sol_091_s4_d2_p3.dat",
+      "solution_sha256": "364a3a86de17ff1d0cd9a946a118195801e7b9d2a5a90c6c74b2a1412e84ea36",
+      "distance": 2434.0,
+      "changeover": 61080.0,
+      "objective": 63514.0
+    },
+    {
+      "id": "092",
+      "instance": "MPVRP_092_s30_d2_p3.dat",
+      "instance_sha256": "2de5a766ea830abb320d77f8da8a8f51e07095b1c016d2840d9f640880b51734",
+      "solution": "Sol_092_s30_d2_p3.dat",
+      "solution_sha256": "6fd24cb5497dc71ba5a96afd9566ebe22bc1ca49089e4b3d79bbd547d2ab1ca8",
+      "distance": 2921.0,
+      "changeover": 10995.0,
+      "objective": 13916.0
+    },
+    {
+      "id": "093",
+      "instance": "MPVRP_093_s20_d4_p5.dat",
+      "instance_sha256": "b039d1de6ce93fd3219cff576eff4bd67f3c3092cc86ff1e3de5b55d4bcd0754",
+      "solution": "Sol_093_s20_d4_p5.dat",
+      "solution_sha256": "ddcbd73a7561384398e120ecd69a2f7ee92ec52b7f83006da07162927e5636b1",
+      "distance": 6742.0,
+      "changeover": 27669.0,
+      "objective": 34411.0
+    },
+    {
+      "id": "094",
+      "instance": "MPVRP_094_s4_d1_p2.dat",
+      "instance_sha256": "88e67bb2ceba756b52b06a477df1663c3e06d507adcf0b1c58c99d8b2bfbb098",
+      "solution": "Sol_094_s4_d1_p2.dat",
+      "solution_sha256": "53a46a327e89814b6351ce233994bcf55dd4454ede286bec4c0d218844da01ab",
+      "distance": 862.0,
+      "changeover": 18085.0,
+      "objective": 18947.0
+    },
+    {
+      "id": "095",
+      "instance": "MPVRP_095_s36_d7_p3.dat",
+      "instance_sha256": "9967cbc803487da317df83e4be3dca644cd2c56ab3008123cda3fe655c318318",
+      "solution": "Sol_095_s36_d7_p3.dat",
+      "solution_sha256": "fd0e2e815b5b7ddf5c007118d2cca9f7e5801a426d32f09c6545b47718a7b1dd",
+      "distance": 3655.0,
+      "changeover": 17617.0,
+      "objective": 21272.0
+    },
+    {
+      "id": "096",
+      "instance": "MPVRP_096_s47_d8_p5.dat",
+      "instance_sha256": "3e0995841730b7db9daf432a4bcdebfe8eef13e053381f6692a58716e6657a48",
+      "solution": "Sol_096_s47_d8_p5.dat",
+      "solution_sha256": "f9c1babaed5f7ab71105fb36715f05531fb7996b21934c4cac3b488cd72b6178",
+      "distance": 8040.0,
+      "changeover": 33875.0,
+      "objective": 41915.0
+    },
+    {
+      "id": "097",
+      "instance": "MPVRP_097_s9_d4_p2.dat",
+      "instance_sha256": "b4dd060dd6758cd7e5a5c95e431b8454ac78164f3a3aa12a5dbbc1c1fa854fda",
+      "solution": "Sol_097_s9_d4_p2.dat",
+      "solution_sha256": "d6f3eb83fecbc41b17af19c375a3f4a6a89a4b7ec5048f23ad45ce0914bf4c38",
+      "distance": 599.0,
+      "changeover": 2972.0,
+      "objective": 3571.0
+    },
+    {
+      "id": "098",
+      "instance": "MPVRP_098_s4_d7_p5.dat",
+      "instance_sha256": "a05d79c1b451385bd386bfc2c81331a2e38f804a01e0e0340cff827a1ebd84fb",
+      "solution": "Sol_098_s4_d7_p5.dat",
+      "solution_sha256": "0f1d902e8d422e0ead437979c2dee258425283054cf440bf2264a56305e874fc",
+      "distance": 2137.0,
+      "changeover": 91323.0,
+      "objective": 93460.0
+    },
+    {
+      "id": "099",
+      "instance": "MPVRP_099_s48_d6_p5.dat",
+      "instance_sha256": "38f69ec25ab014719acc57fec466729820e3fe676c64d1c37bf2260db005a56a",
+      "solution": "Sol_099_s48_d6_p5.dat",
+      "solution_sha256": "fbdede328393377c1f29c3d684a668a0710a69933e16fa3701e6f75c2a8c0d82",
+      "distance": 3361.0,
+      "changeover": 15330.0,
+      "objective": 18691.0
+    },
+    {
+      "id": "100",
+      "instance": "MPVRP_100_s11_d4_p5.dat",
+      "instance_sha256": "5a1fd46bffba7c3d3a1fdccd5146344d698437c60e69909da980eb7812a56434",
+      "solution": "Sol_100_s11_d4_p5.dat",
+      "solution_sha256": "cf02a50c296592dd0696e05ca988f50d819446e3f5686c56ff4ff4b4f291b680",
+      "distance": 4312.0,
+      "changeover": 39278.0,
+      "objective": 43590.0
+    }
+  ]
+}

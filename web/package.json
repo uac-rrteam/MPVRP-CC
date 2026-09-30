@@ -1,0 +1,37 @@
+{
+  "name": "mpvrp-cc-site",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "prepare:assets": "node scripts/prepare-assets.mjs",
+    "check:references": "tsx scripts/check-reference-parity.ts",
+    "score": "tsx scripts/score-submission.ts",
+    "evaluate:pr": "tsx scripts/evaluate-contribution.ts",
+    "publish:result": "tsx scripts/publish-result.ts",
+    "check:leaderboard": "tsx scripts/check-leaderboard.ts",
+    "dev": "npm run prepare:assets && vite",
+    "build": "npm run prepare:assets && tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.0.0",
+    "yauzl": "^3.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/yauzl": "^3.4.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "daisyui": "^5.7.47",
+    "lucide-react": "^1.49.0",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.0",
+    "vite": "^7.0.0"
+  }
+}

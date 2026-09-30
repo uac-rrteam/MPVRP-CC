@@ -1,0 +1,61 @@
+name: Score submission pull request
+
+on:
+  pull_request:
+    paths:
+      - 'submissions/**'
+
+permissions:
+  contents: read
+
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out trusted scorer and benchmark
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: trusted
+
+      - name: Check out contribution as data
+        uses: actions/checkout@v4
+        with:
+          ref: refs/pull/${{ github.event.number }}/head
+          path: contribution
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Fetch base commit for change validation
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: git -C contribution fetch origin "$BASE_SHA"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: trusted/web/package-lock.json
+
+      - name: Install trusted scorer dependencies
+        working-directory: trusted/web
+        run: npm ci
+
+      - name: Verify frozen references
+        working-directory: trusted/web
+        run: npm run check:references
+
+      - name: Evaluate pull request data
+        working-directory: trusted/web
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+        run: npm run evaluate:pr -- ../../contribution "$BASE_SHA" "$PR_AUTHOR" ../../report.json
+
+      - name: Upload scoring report
+        uses: actions/upload-artifact@v4
+        with:
+          name: scoring-report
+          path: report.json

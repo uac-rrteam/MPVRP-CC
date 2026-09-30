@@ -1,0 +1,113 @@
+name: Publish accepted submission
+
+on:
+  workflow_dispatch:
+    inputs:
+      pull_request:
+        description: 'Reviewed submission pull request number'
+        required: true
+        type: number
+
+permissions:
+  contents: write
+  pull-requests: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-and-leaderboard
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out trusted main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: trusted
+
+      - name: Look up reviewed pull request
+        id: pr
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ inputs.pull_request }}
+        run: |
+          gh api "repos/$GITHUB_REPOSITORY/pulls/$PR_NUMBER" > pr.json
+          test "$(jq -r '.base.ref' pr.json)" = main
+          echo "head_sha=$(jq -r '.head.sha' pr.json)" >> "$GITHUB_OUTPUT"
+          echo "base_sha=$(jq -r '.base.sha' pr.json)" >> "$GITHUB_OUTPUT"
+          echo "author=$(jq -r '.user.login' pr.json)" >> "$GITHUB_OUTPUT"
+
+      - name: Check out contribution as data
+        uses: actions/checkout@v4
+        with:
+          ref: refs/pull/${{ inputs.pull_request }}/head
+          path: contribution
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Fetch pull request base commit
+        env:
+          BASE_SHA: ${{ steps.pr.outputs.base_sha }}
+          EXPECTED_HEAD: ${{ steps.pr.outputs.head_sha }}
+        run: |
+          test "$(git -C contribution rev-parse HEAD)" = "$EXPECTED_HEAD"
+          git -C contribution fetch origin "$BASE_SHA"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: trusted/web/package-lock.json
+
+      - name: Install trusted dependencies
+        working-directory: trusted/web
+        run: npm ci
+
+      - name: Verify references and re-evaluate contribution
+        working-directory: trusted/web
+        env:
+          BASE_SHA: ${{ steps.pr.outputs.base_sha }}
+          PR_AUTHOR: ${{ steps.pr.outputs.author }}
+        run: |
+          npm run check:references
+          npm run evaluate:pr -- ../../contribution "$BASE_SHA" "$PR_AUTHOR" ../../report.json
+
+      - name: Record accepted run
+        working-directory: trusted/web
+        env:
+          PR_NUMBER: ${{ inputs.pull_request }}
+        run: npm run publish:result -- ../../report.json "$PR_NUMBER"
+
+      - name: Commit leaderboard history
+        run: |
+          git -C trusted config user.name 'github-actions[bot]'
+          git -C trusted config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C trusted add leaderboard/runs.json
+          git -C trusted commit -m "Publish MPVRP-CC submission #${{ inputs.pull_request }}"
+          git -C trusted push origin HEAD:main
+
+      - name: Build refreshed site
+        working-directory: trusted/web
+        env:
+          PAGES_BASE: /MPVRP-CC/
+        run: npm run build
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: trusted/web/dist
+
+      - name: Deploy Pages artifact
+        id: deployment
+        uses: actions/deploy-pages@v4

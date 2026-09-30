@@ -1,23 +1,61 @@
-name: Deploy to GitHub Pages
+name: Deploy site to GitHub Pages
 
 on:
   push:
     branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-and-leaderboard
+  cancel-in-progress: false
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - name: Check out repository
+        uses: actions/checkout@v4
 
-      - name: Générer config.js depuis le template
-        run: |
-          sed 's|__API_URL__|${{ secrets.API_URL }}|g' \
-            pages/static/js/config.template.js > pages/static/js/config.js
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
-          exclude_assets: '.github,.gitignore,.env,generate_config.sh,scripts,backend,tests,*.py'
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install dependencies
+        working-directory: web
+        run: npm ci
+
+      - name: Check fixed references and ranking
+        working-directory: web
+        run: |
+          npm run check:references
+          npm run check:leaderboard
+
+      - name: Build site
+        working-directory: web
+        env:
+          PAGES_BASE: /MPVRP-CC/
+        run: npm run build
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: web/dist
+
+      - name: Deploy Pages artifact
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,1 @@
+{"root":["./src/config.ts","./src/examples.ts","./src/leaderboard.ts","./src/main.tsx","./src/scoring/core.ts","./scripts/check-leaderboard.ts","./scripts/check-reference-parity.ts","./scripts/evaluate-contribution.ts","./scripts/publish-result.ts","./scripts/score-submission.ts","./vite.config.ts"],"version":"5.9.3"}

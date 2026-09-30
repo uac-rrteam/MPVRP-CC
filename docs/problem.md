@@ -121,6 +121,6 @@ Only the instances with changeover costs are included in the official ranking. T
 
 For each feasible official instance, the score is the sum of the total travel distance and the total transition cost. Participants may submit any subset of the 100 solutions in a ZIP archive; submitting the complete set at once is not required.
 
-The platform identifies the solutions present in the archive and evaluates them independently. A solution that is absent, unresolved, unreadable, or infeasible receives the same penalty of `100000` for its instance.
+The platform identifies the solutions present in the archive and evaluates them independently. Missing, unreadable, and infeasible solutions do not count as feasible; no fixed objective penalty is assigned under scoring version 1.0.0.
 
-The final score is the sum obtained across all 100 instances. Lower scores are better.
+Complete submissions have feasible solutions for all 100 official instances and are ranked by their mean percentage gap from fixed feasible reference solutions. Partial submissions appear in a separate progress table. Lower gaps are better. See [`scoring-v1.md`](scoring-v1.md) for the authoritative scoring and ranking rules. The former Python service still uses the legacy raw-sum score during migration.
